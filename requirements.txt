@@ -1,0 +1,9 @@
+tensorflow
+scipy
+scikit-learn
+matplotlib
+xlrd
+ipdb
+Pillow
+lxml
+ipykernel
