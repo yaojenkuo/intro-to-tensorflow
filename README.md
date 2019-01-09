@@ -5,3 +5,4 @@ TensorFlow is an open-source machine learning library for research and productio
 ## 投影片
 
 - [Setup](setup.slides.html)
+- [Getting Started](getting-started.slides.html)
