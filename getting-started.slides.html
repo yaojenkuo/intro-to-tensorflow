@@ -12422,8 +12422,16 @@ Tensor(&#34;y_2:0&#34;, shape=(), dtype=int32)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25776;&#23531;&#19968;&#20491;-tf_add.py-&#27284;&#26696;">&#25776;&#23531;&#19968;&#20491; tf_add.py &#27284;&#26696;<a class="anchor-link" href="#&#25776;&#23531;&#19968;&#20491;-tf_add.py-&#27284;&#26696;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1"># tf_add.py</span>
-<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
+<h2 id="&#25776;&#23531;&#19968;&#20491;&#30456;&#21152;&#30340;&#36939;&#31639;">&#25776;&#23531;&#19968;&#20491;&#30456;&#21152;&#30340;&#36939;&#31639;<a class="anchor-link" href="#&#25776;&#23531;&#19968;&#20491;&#30456;&#21152;&#30340;&#36939;&#31639;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
@@ -12431,22 +12439,32 @@ Tensor(&#34;y_2:0&#34;, shape=(), dtype=int32)
 
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
   <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s1">&#39;./graphs&#39;</span><span class="p">,</span> <span class="n">sess</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_add</span><span class="p">))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_add</span><span class="p">))</span>
 <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#22519;&#34892;-tf_add.py-&#27284;&#26696;">&#22519;&#34892; tf_add.py &#27284;&#26696;<a class="anchor-link" href="#&#22519;&#34892;-tf_add.py-&#27284;&#26696;">&#182;</a></h2><div class="highlight"><pre><span></span>python tf_add.py
-</pre></div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>15
+</pre>
+</div>
+</div>
 
 </div>
 </div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
