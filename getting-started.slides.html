@@ -11916,6 +11916,7 @@ a.anchor-link {
 <li>張量</li>
 <li>運算</li>
 <li>TensorBoard</li>
+<li>隨堂練習</li>
 </ul>
 
 </div>
@@ -11930,6 +11931,7 @@ a.anchor-link {
 <li>純量（scalar）：零維張量</li>
 <li>向量（vector）：一維張量</li>
 <li>矩陣（matrix）：二維張量</li>
+<li>張量（tensor）：n 維張量，n &gt;= 3</li>
 </ul>
 </li>
 </ul>
@@ -11942,7 +11944,8 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
 
 <span class="n">tf_scalar</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">87</span><span class="p">)</span>
 <span class="n">tf_vector</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
@@ -11950,10 +11953,13 @@ a.anchor-link {
   <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
   <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 <span class="p">])</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">tf_tensor</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">tf_scalar</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tf_vector</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tf_matrix</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tf_scalar</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tf_vector</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tf_matrix</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tf_tensor</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11973,6 +11979,7 @@ a.anchor-link {
 <pre>Tensor(&#34;Const:0&#34;, shape=(), dtype=int32)
 Tensor(&#34;Const_1:0&#34;, shape=(2,), dtype=int32)
 Tensor(&#34;Const_2:0&#34;, shape=(2, 2), dtype=int32)
+Tensor(&#34;Const_3:0&#34;, shape=(2, 3, 4), dtype=int64)
 </pre>
 </div>
 </div>
@@ -12002,12 +12009,12 @@ Tensor(&#34;Const_2:0&#34;, shape=(2, 2), dtype=int32)
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="n">tf_add</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tf_add</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tf_add</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12040,10 +12047,10 @@ Tensor(&#34;Add:0&#34;, shape=(), dtype=int32)
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 建立一個 Session 獲得解答</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 建立一個 Session 獲得解答</span>
 <span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
 <span class="n">ans</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_add</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
 <span class="n">sess</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
@@ -12092,11 +12099,11 @@ Tensor(&#34;Add:0&#34;, shape=(), dtype=int32)
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 用 with 建立 Session</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 用 with 建立 Session</span>
 <span class="n">tf_multiply</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
   <span class="n">ans</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_multiply</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
 <span class="c1"># sess.close() can be neglected if using with statement</span>
 </pre></div>
 
@@ -12145,11 +12152,11 @@ Tensor(&#34;Add:0&#34;, shape=(), dtype=int32)
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 用 with 建立 Session</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 用 with 建立 Session</span>
 <span class="n">tf_subtract</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
   <span class="n">ans</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_subtract</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12197,11 +12204,11 @@ Tensor(&#34;Add:0&#34;, shape=(), dtype=int32)
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 注意 type 要為浮點數</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 注意 type 要為浮點數</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mf">8.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mf">7.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12233,11 +12240,11 @@ Tensor(&#34;y_1:0&#34;, shape=(), dtype=float32)
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 用 with 建立 Session</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 用 with 建立 Session</span>
 <span class="n">tf_div</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
   <span class="n">ans</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_div</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12277,15 +12284,15 @@ Tensor(&#34;y_1:0&#34;, shape=(), dtype=float32)
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 注意 type 為整數</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 注意 type 為整數</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="n">tf_div</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">truediv</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
   <span class="n">ans</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_div</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12326,7 +12333,7 @@ Tensor(&#34;y_2:0&#34;, shape=(), dtype=int32)
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
 
 <span class="n">tf_add</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
@@ -12341,7 +12348,7 @@ Tensor(&#34;y_2:0&#34;, shape=(), dtype=int32)
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
   <span class="k">for</span> <span class="n">tf_op</span> <span class="ow">in</span> <span class="n">tf_ops</span><span class="p">:</span>
     <span class="n">ans</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_op</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12361,7 +12368,7 @@ Tensor(&#34;y_2:0&#34;, shape=(), dtype=int32)
 <pre>17
 66
 5
-1.8333333333333333
+1
 121
 5
 1
@@ -12431,15 +12438,15 @@ Tensor(&#34;y_2:0&#34;, shape=(), dtype=int32)
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
 <span class="n">tf_add</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-  <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s1">&#39;./graphs&#39;</span><span class="p">,</span> <span class="n">sess</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_add</span><span class="p">))</span>
+  <span class="n">writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s1">&#39;./graphs/tf_add&#39;</span><span class="p">,</span> <span class="n">sess</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf_add</span><span class="p">))</span>
 <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
@@ -12470,7 +12477,7 @@ Tensor(&#34;y_2:0&#34;, shape=(), dtype=int32)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21855;&#21205;-TensorBoard">&#21855;&#21205; TensorBoard<a class="anchor-link" href="#&#21855;&#21205;-TensorBoard">&#182;</a></h2><div class="highlight"><pre><span></span>tensorboard --logdir<span class="o">=</span>./graphs --host<span class="o">=</span>127.0.0.1
+<h2 id="&#21855;&#21205;-TensorBoard">&#21855;&#21205; TensorBoard<a class="anchor-link" href="#&#21855;&#21205;-TensorBoard">&#182;</a></h2><div class="highlight"><pre><span></span>tensorboard --logdir<span class="o">=</span>./graphs/tf_add --host<span class="o">=</span>127.0.0.1
 </pre></div>
 
 <pre><code>## Starting TensorBoard b'41' on port 6006
@@ -12496,6 +12503,40 @@ Tensor(&#34;y_2:0&#34;, shape=(), dtype=int32)
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="We-are-all-set!">We are all set!<a class="anchor-link" href="#We-are-all-set!">&#182;</a></h2><p><img src="img/0105.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20351;&#29992;-TensorFlow-&#23526;&#20316;&#25885;&#27663;&#28331;&#24230;&#36681;&#25563;&#33775;&#27663;&#28331;&#24230;&#30340;&#35336;&#31639;">&#20351;&#29992; TensorFlow &#23526;&#20316;&#25885;&#27663;&#28331;&#24230;&#36681;&#25563;&#33775;&#27663;&#28331;&#24230;&#30340;&#35336;&#31639;<a class="anchor-link" href="#&#20351;&#29992;-TensorFlow-&#23526;&#20316;&#25885;&#27663;&#28331;&#24230;&#36681;&#25563;&#33775;&#27663;&#28331;&#24230;&#30340;&#35336;&#31639;">&#182;</a></h2><ul>
+<li>將現在台北市的攝氏溫度轉換為華氏溫度</li>
+<li>啟動 TensorBoard 服務觀察這個運算，將日誌儲存至 <code>graphs/celcius_to_fahrenheit</code></li>
+</ul>
+<p>$$F = \frac{9}{5}C + 32$$</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20351;&#29992;-TensorFlow-&#23526;&#20316;-BMI-&#30340;&#35336;&#31639;">&#20351;&#29992; TensorFlow &#23526;&#20316; BMI &#30340;&#35336;&#31639;<a class="anchor-link" href="#&#20351;&#29992;-TensorFlow-&#23526;&#20316;-BMI-&#30340;&#35336;&#31639;">&#182;</a></h2><ul>
+<li>計算 Shaquille O'Neal 巔峰時期（216 公分、147 公斤）的 BMI</li>
+<li>啟動 TensorBoard 服務觀察這個運算，將日誌儲存至 <code>graphs/bmi</code></li>
+</ul>
+<p>$$BMI = \frac{weight_{kg}}{height_{m}^2}$$</p>
 
 </div>
 </div>
