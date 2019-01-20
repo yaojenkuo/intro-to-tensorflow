@@ -26,6 +26,10 @@
 - [Setup](setup.slides.html)
 - [Getting Started](getting-started.slides.html)
 
+## 延伸閱讀
+
+- [TensorFlow for Deep Learning](https://www.amazon.com/TensorFlow-Deep-Learning-Regression-Reinforcement/dp/1491980451)
+
 ## 課程錄影清單
 
 - [307 期假日專題班]()
