@@ -17,6 +17,10 @@
 - 30% 出席率
 - 70% 隨堂練習
 
+## 課程社團
+
+<https://www.facebook.com/groups/ntucsietrainpyds/>
+
 ## 課程共筆
 
 <https://colab.research.google.com/drive/1ruwJVWlW71FcJHWaS1nKED5o6HT8k1Ep>
@@ -25,6 +29,10 @@
 
 - [Setup](setup.slides.html)
 - [Getting Started](getting-started.slides.html)
+- [Constants, Variables, and Placeholders](constants-variables-and-placeholders.slides.html)
+- [Prerequisites for Building Models with TensorFlow]()
+- [Linear Regression with TensorFlow]()
+- [Logistic Regression with TensorFlow]()
 
 ## 延伸閱讀
 
@@ -32,4 +40,4 @@
 
 ## 課程錄影清單
 
-- [307 期假日專題班]()
+- [307 期假日專題班](https://www.youtube.com/playlist?list=PLEq7iw5uOtuWJ5Tea-GeqhH6XF9zhLi2W)
