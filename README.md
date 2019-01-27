@@ -30,8 +30,8 @@
 - [Setup](setup.slides.html)
 - [Getting Started](getting-started.slides.html)
 - [Constants, Variables, and Placeholders](constants-variables-and-placeholders.slides.html)
-- [Prerequisites for Building Models with TensorFlow]()
-- [Linear Regression with TensorFlow]()
+- [Prerequisites for Building Models with TensorFlow](prerequisites-for-building-models-with-tf.slides.html)
+- [Linear Regression with TensorFlow](linear-regression-with-tf.slides.html)
 - [Logistic Regression with TensorFlow]()
 
 ## 延伸閱讀
