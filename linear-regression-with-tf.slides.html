@@ -9,6 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+
 <title>linear-regression-with-tf slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -58,7 +59,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -255,7 +256,6 @@ th {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -6800,15 +6800,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6865,6 +6865,19 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
+.fa-pull-left {
+  float: left;
+}
+.fa-pull-right {
+  float: right;
+}
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6880,6 +6893,10 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6902,31 +6919,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7411,6 +7428,7 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7423,6 +7441,7 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
+.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8060,7 +8079,8 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before {
+.fa-gittip:before,
+.fa-gratipay:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8164,7 +8184,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8290,6 +8310,7 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8303,6 +8324,8 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8470,6 +8493,657 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
+}
+.fa-buysellads:before {
+  content: "\f20d";
+}
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+.fa-dashcube:before {
+  content: "\f210";
+}
+.fa-forumbee:before {
+  content: "\f211";
+}
+.fa-leanpub:before {
+  content: "\f212";
+}
+.fa-sellsy:before {
+  content: "\f213";
+}
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+.fa-skyatlas:before {
+  content: "\f216";
+}
+.fa-cart-plus:before {
+  content: "\f217";
+}
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+.fa-diamond:before {
+  content: "\f219";
+}
+.fa-ship:before {
+  content: "\f21a";
+}
+.fa-user-secret:before {
+  content: "\f21b";
+}
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+.fa-street-view:before {
+  content: "\f21d";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.fa-venus:before {
+  content: "\f221";
+}
+.fa-mars:before {
+  content: "\f222";
+}
+.fa-mercury:before {
+  content: "\f223";
+}
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "\f224";
+}
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+.fa-venus-double:before {
+  content: "\f226";
+}
+.fa-mars-double:before {
+  content: "\f227";
+}
+.fa-venus-mars:before {
+  content: "\f228";
+}
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+.fa-neuter:before {
+  content: "\f22c";
+}
+.fa-genderless:before {
+  content: "\f22d";
+}
+.fa-facebook-official:before {
+  content: "\f230";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-whatsapp:before {
+  content: "\f232";
+}
+.fa-server:before {
+  content: "\f233";
+}
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-user-times:before {
+  content: "\f235";
+}
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+.fa-viacoin:before {
+  content: "\f237";
+}
+.fa-train:before {
+  content: "\f238";
+}
+.fa-subway:before {
+  content: "\f239";
+}
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+.fa-opencart:before {
+  content: "\f23d";
+}
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "\f240";
+}
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "\f242";
+}
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "\f244";
+}
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+.fa-i-cursor:before {
+  content: "\f246";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+.fa-sticky-note:before {
+  content: "\f249";
+}
+.fa-sticky-note-o:before {
+  content: "\f24a";
+}
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+.fa-hourglass-o:before {
+  content: "\f250";
+}
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+.fa-hourglass:before {
+  content: "\f254";
+}
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "\f255";
+}
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "\f256";
+}
+.fa-hand-scissors-o:before {
+  content: "\f257";
+}
+.fa-hand-lizard-o:before {
+  content: "\f258";
+}
+.fa-hand-spock-o:before {
+  content: "\f259";
+}
+.fa-hand-pointer-o:before {
+  content: "\f25a";
+}
+.fa-hand-peace-o:before {
+  content: "\f25b";
+}
+.fa-trademark:before {
+  content: "\f25c";
+}
+.fa-registered:before {
+  content: "\f25d";
+}
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+.fa-gg:before {
+  content: "\f260";
+}
+.fa-gg-circle:before {
+  content: "\f261";
+}
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+.fa-get-pocket:before {
+  content: "\f265";
+}
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+.fa-safari:before {
+  content: "\f267";
+}
+.fa-chrome:before {
+  content: "\f268";
+}
+.fa-firefox:before {
+  content: "\f269";
+}
+.fa-opera:before {
+  content: "\f26a";
+}
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+.fa-tv:before,
+.fa-television:before {
+  content: "\f26c";
+}
+.fa-contao:before {
+  content: "\f26d";
+}
+.fa-500px:before {
+  content: "\f26e";
+}
+.fa-amazon:before {
+  content: "\f270";
+}
+.fa-calendar-plus-o:before {
+  content: "\f271";
+}
+.fa-calendar-minus-o:before {
+  content: "\f272";
+}
+.fa-calendar-times-o:before {
+  content: "\f273";
+}
+.fa-calendar-check-o:before {
+  content: "\f274";
+}
+.fa-industry:before {
+  content: "\f275";
+}
+.fa-map-pin:before {
+  content: "\f276";
+}
+.fa-map-signs:before {
+  content: "\f277";
+}
+.fa-map-o:before {
+  content: "\f278";
+}
+.fa-map:before {
+  content: "\f279";
+}
+.fa-commenting:before {
+  content: "\f27a";
+}
+.fa-commenting-o:before {
+  content: "\f27b";
+}
+.fa-houzz:before {
+  content: "\f27c";
+}
+.fa-vimeo:before {
+  content: "\f27d";
+}
+.fa-black-tie:before {
+  content: "\f27e";
+}
+.fa-fonticons:before {
+  content: "\f280";
+}
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+.fa-edge:before {
+  content: "\f282";
+}
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+.fa-codiepie:before {
+  content: "\f284";
+}
+.fa-modx:before {
+  content: "\f285";
+}
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+.fa-usb:before {
+  content: "\f287";
+}
+.fa-product-hunt:before {
+  content: "\f288";
+}
+.fa-mixcloud:before {
+  content: "\f289";
+}
+.fa-scribd:before {
+  content: "\f28a";
+}
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+.fa-hashtag:before {
+  content: "\f292";
+}
+.fa-bluetooth:before {
+  content: "\f293";
+}
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+.fa-percent:before {
+  content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+.fa-first-order:before {
+  content: "\f2b0";
+}
+.fa-yoast:before {
+  content: "\f2b1";
+}
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "\f2b3";
+}
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+.fa-linode:before {
+  content: "\f2b8";
+}
+.fa-address-book:before {
+  content: "\f2b9";
+}
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+.fa-user-o:before {
+  content: "\f2c0";
+}
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+.fa-quora:before {
+  content: "\f2c4";
+}
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+.fa-telegram:before {
+  content: "\f2c6";
+}
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+.fa-shower:before {
+  content: "\f2cc";
+}
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+.fa-podcast:before {
+  content: "\f2ce";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+.fa-grav:before {
+  content: "\f2d6";
+}
+.fa-etsy:before {
+  content: "\f2d7";
+}
+.fa-imdb:before {
+  content: "\f2d8";
+}
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+.fa-eercast:before {
+  content: "\f2da";
+}
+.fa-microchip:before {
+  content: "\f2db";
+}
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+.fa-meetup:before {
+  content: "\f2e0";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /*!
 *
@@ -8750,6 +9424,10 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
+div.traceback-wrapper pre.traceback {
+  max-height: 600px;
+  overflow: auto;
+}
 /**
  * Primary styles
  *
@@ -8775,6 +9453,10 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -8806,13 +9488,16 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-@media (max-width: 991px) {
-  #ipython_notebook {
-    margin-left: 10px;
-  }
-}
 [dir="rtl"] #ipython_notebook {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] #ipython_notebook.pull-left {
   float: right !important;
+  float: right;
+}
+.flex-spacer {
+  flex: 1;
 }
 #noscript {
   width: auto;
@@ -8847,8 +9532,14 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
+span#kernel_logo_widget {
+  margin: 0 10px;
+}
 span#login_widget {
   float: right;
+}
+[dir="rtl"] span#login_widget {
+  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -8964,6 +9655,9 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
+.modal-header {
+  cursor: move;
+}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -8984,6 +9678,19 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
+[dir="rtl"] .center-nav form.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] .center-nav .navbar-text {
+  float: right;
+}
+[dir="rtl"] .navbar-inner {
+  text-align: right;
+}
+[dir="rtl"] div.text-left {
+  text-align: right;
+}
 /*!
 *
 * IPython tree view
@@ -9000,34 +9707,42 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  text-align: center;
-  vertical-align: middle;
-  display: inline;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
-  width: 12ex;
-  margin-right: -12ex;
+}
+.alternate_upload .btn-xs > input.fileinput {
+  margin: -1px -5px;
 }
 .alternate_upload .btn-upload {
+  position: relative;
   height: 22px;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
 }
 /**
  * Primary styles
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
+}
+[dir="rtl"] ul#tabs.nav-tabs > li {
+  float: right;
+}
+[dir="rtl"] ul#tabs.nav.nav-tabs {
+  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -9047,15 +9762,13 @@ ul.breadcrumb span {
 .list_toolbar .tree-buttons {
   padding-top: 1px;
 }
-[dir="rtl"] .list_toolbar .tree-buttons {
+[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
   float: left !important;
+  float: left;
 }
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
+[dir="rtl"] .list_toolbar .col-sm-4,
+[dir="rtl"] .list_toolbar .col-sm-8 {
+  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9111,7 +9824,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9121,6 +9834,9 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
+}
+[dir="rtl"] .list_item > div input {
+  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9136,6 +9852,14 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
+}
+.item_modified {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+[dir="rtl"] .item_modified.pull-right {
+  float: left !important;
+  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9164,6 +9888,14 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
+[dir="rtl"] .item_buttons.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .item_buttons .kernel-name {
+  margin-left: 7px;
+  float: right;
+}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9189,18 +9921,32 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
+.sort_button {
+  display: inline-block;
+  padding-left: 7px;
+}
+[dir="rtl"] .sort_button.pull-right {
+  float: left !important;
+  float: left;
+}
 #tree-selector {
   padding-right: 0px;
-}
-[dir="rtl"] #tree-selector a {
-  float: right;
 }
 #button-select-all {
   min-width: 50px;
 }
+[dir="rtl"] #button-select-all.btn {
+  float: right ;
+}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
+  margin-top: 2px;
+  height: 16px;
+}
+[dir="rtl"] #select-all.pull-left {
+  float: right !important;
+  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9218,6 +9964,12 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
+.folder_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.folder_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9234,6 +9986,12 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
+}
+.notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9253,6 +10011,12 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
+.running_notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.running_notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9270,6 +10034,12 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
+.file_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.file_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9284,8 +10054,11 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
+#new-menu .dropdown-header {
+  font-size: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 3px;
+  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -9332,9 +10105,6 @@ ul#new-menu {
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
 }
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
-}
 .delete-button {
   display: none;
 }
@@ -9342,6 +10112,12 @@ ul#new-menu {
   display: none;
 }
 .rename-button {
+  display: none;
+}
+.move-button {
+  display: none;
+}
+.download-button {
   display: none;
 }
 .shutdown-button {
@@ -9384,6 +10160,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -9398,6 +10180,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
+}
+.dirty-indicator-dirty.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-dirty.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -9414,6 +10202,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator-clean.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -9428,6 +10222,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
+}
+.dirty-indicator-clean:before.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean:before.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -9473,14 +10273,132 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
+.CodeMirror-dialog {
+  background-color: #fff;
+}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -9559,12 +10477,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -9577,27 +10503,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -9793,7 +10731,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -9803,11 +10743,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -10061,6 +11014,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -10099,7 +11055,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -10259,39 +11215,35 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 .rendered_html ul {
   list-style: disc;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ul ul ul {
   list-style: circle;
-  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
-  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -10305,14 +11257,23 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
+  padding: 0px;
+  background-color: #fff;
+}
+.rendered_html code {
+  background-color: #eff0f1;
+}
+.rendered_html p code {
+  padding: 1px 5px;
+}
+.rendered_html pre code {
+  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
-  background-color: #fff;
   color: #000;
   font-size: 100%;
-  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -10320,24 +11281,36 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 1em 2em;
-}
-.rendered_html td,
-.rendered_html th {
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
-  padding: 4px;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
 }
 .rendered_html th {
   font-weight: bold;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -10364,6 +11337,15 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
+}
+.rendered_html .alert {
+  margin-bottom: initial;
+}
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] .rendered_html p {
+  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -10418,8 +11400,17 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered .rendered_html td {
+  max-width: none;
+}
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -10556,6 +11547,28 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.jupyter-keybindings {
+  padding: 1px;
+  line-height: 24px;
+  border-bottom: 1px solid gray;
+}
+.jupyter-keybindings input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.jupyter-keybindings i {
+  padding: 6px;
+}
+.well code {
+  background-color: #ffffff;
+  border-color: #ababab;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -10688,6 +11701,152 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
+.tags_button_container {
+  width: 100%;
+  display: flex;
+}
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tag-container > * {
+  margin: 0 4px;
+}
+.remove-tag-btn {
+  margin-left: 4px;
+}
+.tags-input {
+  display: flex;
+}
+.cell-tag:last-child:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  /* Fade to background color of cell toolbar */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
+}
+.tags-input > * {
+  margin-left: 4px;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+  box-shadow: none;
+  width: inherit;
+  font-size: inherit;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 4px;
+  display: inline-block;
+}
+.cell-tag:focus,
+.tags-input input:focus,
+.tags-input button:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.cell-tag::-moz-placeholder,
+.tags-input input::-moz-placeholder,
+.tags-input button::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.cell-tag:-ms-input-placeholder,
+.tags-input input:-ms-input-placeholder,
+.tags-input button:-ms-input-placeholder {
+  color: #999;
+}
+.cell-tag::-webkit-input-placeholder,
+.tags-input input::-webkit-input-placeholder,
+.tags-input button::-webkit-input-placeholder {
+  color: #999;
+}
+.cell-tag::-ms-expand,
+.tags-input input::-ms-expand,
+.tags-input button::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+.cell-tag[readonly],
+.tags-input input[readonly],
+.tags-input button[readonly],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  cursor: not-allowed;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button {
+  height: auto;
+}
+select.cell-tag,
+select.tags-input input,
+select.tags-input button {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button,
+select[multiple].cell-tag,
+select[multiple].tags-input input,
+select[multiple].tags-input button {
+  height: auto;
+}
+.cell-tag,
+.tags-input button {
+  padding: 0px 4px;
+}
+.cell-tag {
+  background-color: #fff;
+  white-space: nowrap;
+}
+.tags-input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
 .completions {
   position: absolute;
   z-index: 110;
@@ -10713,16 +11872,28 @@ select[multiple].celltoolbar select {
 .completions select option.context {
   color: #286090;
 }
-#kernel_logo_widget {
-  float: right !important;
-  float: right;
-}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
+}
+[dir="rtl"] #kernel_logo_widget {
+  float: left !important;
+  float: left;
+}
+.modal .modal-body .move-path {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: center;
+}
+.modal .modal-body .move-path .server-root {
+  padding-right: 20px;
+}
+.modal .modal-body .move-path .path-input {
+  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -10744,11 +11915,41 @@ select[multiple].celltoolbar select {
 #menubar .navbar-collapse {
   clear: left;
 }
+[dir="rtl"] #menubar .navbar-toggle {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-collapse {
+  clear: right;
+}
+[dir="rtl"] #menubar .navbar-nav {
+  float: right;
+}
+[dir="rtl"] #menubar .nav {
+  padding-right: 0px;
+}
+[dir="rtl"] #menubar .navbar-nav > li {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-right {
+  float: left !important;
+}
+[dir="rtl"] ul.dropdown-menu {
+  text-align: right;
+  left: auto;
+}
+[dir="rtl"] ul#new-menu.dropdown-menu {
+  right: auto;
+  left: 0;
+}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
+}
+[dir="rtl"] i.menu-icon.pull-right {
+  float: left !important;
+  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -10756,6 +11957,17 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a {
+  padding-left: 2.2em;
+}
+[dir="rtl"] ul#help_menu li a i {
+  margin-right: 0;
+  margin-left: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a i.pull-right {
+  float: left !important;
+  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -10765,6 +11977,10 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
+}
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -10783,11 +11999,23 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
+.dropdown-submenu > a:after.fa-pull-left {
+  margin-right: .3em;
+}
+.dropdown-submenu > a:after.fa-pull-right {
+  margin-left: .3em;
+}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
+}
+[dir="rtl"] .dropdown-submenu > a:after {
+  float: left;
+  content: "\f0d9";
+  margin-right: 0;
+  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -10804,6 +12032,10 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
+[dir="rtl"] #notification_area {
+  float: left !important;
+  float: left;
+}
 .indicator_area {
   float: right !important;
   float: right;
@@ -10814,6 +12046,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] .indicator_area {
+  float: left !important;
+  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -10831,6 +12067,12 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
+[dir="rtl"] #kernel_indicator {
+  float: left !important;
+  float: left;
+  border-left: 0;
+  border-right: 1px solid;
+}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -10841,6 +12083,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] #modal_indicator {
+  float: left !important;
+  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -10871,6 +12117,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
+.edit_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.edit_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
+}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -10885,6 +12137,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
+}
+.command_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.command_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -10901,6 +12159,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
+.kernel_idle_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_idle_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10915,6 +12179,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
+}
+.kernel_busy_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_busy_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -10931,6 +12201,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
+.kernel_dead_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_dead_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10945,6 +12221,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
+}
+.kernel_disconnected_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_disconnected_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -11335,27 +12617,46 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  margin-top: 6px;
+  height: 30px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 50%;
+  flex: 1;
 }
 span.save_widget span.filename {
-  height: 1em;
+  height: 100%;
   line-height: 1em;
-  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
+[dir="rtl"] span.save_widget.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] span.save_widget span.filename {
+  margin-left: 0;
+  margin-right: 16px;
+}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
+    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -11399,6 +12700,9 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
+.toolbar-btn-label {
+  margin-left: 6px;
+}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -11418,6 +12722,10 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
+}
+[dir="rtl"] .btn-group > .btn,
+.btn-group-vertical > .btn {
+  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -11568,6 +12876,10 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -11576,6 +12888,13 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
+}
+ul.typeahead-list  > li > a.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .typeahead-list {
+  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -11587,10 +12906,19 @@ ul.typeahead-list > li > a {
   outline: none;
 }
 .no-shortcut {
-  display: none;
+  min-width: 20px;
+  color: transparent;
+}
+[dir="rtl"] .no-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .command-shortcut.pull-right {
+  float: left !important;
+  float: left;
 }
 .command-shortcut:before {
-  content: "(command)";
+  content: "(command mode)";
   padding-right: 3px;
   color: #777777;
 }
@@ -11599,6 +12927,10 @@ ul.typeahead-list > li > a {
   padding-right: 3px;
   color: #777777;
 }
+[dir="rtl"] .edit-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -11606,6 +12938,12 @@ ul.typeahead-list > li > a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
+}
+[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+  border-left: none;
+}
+[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -11710,8 +13048,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11722,9 +13062,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11898,8 +13240,7 @@ a.anchor-link {
 <div class="slides">
 <section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Introduction-to-TensorFlow">Introduction to TensorFlow<a class="anchor-link" href="#Introduction-to-TensorFlow">&#182;</a></h1><blockquote><p>Linear Regression with TensorFlow</p>
 </blockquote>
@@ -11909,14 +13250,15 @@ a.anchor-link {
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#22823;&#32177;">&#22823;&#32177;<a class="anchor-link" href="#&#22823;&#32177;">&#182;</a></h2><ul>
 <li>取得資料</li>
+<li>Benchmark</li>
 <li>建構 TensorFlow 計算圖形</li>
 <li>訓練</li>
-<li>TensorBoard</li>
+<li>檢視 TensorBoard</li>
+<li>加入 Name Scopes</li>
 <li>隨堂練習</li>
 </ul>
 
@@ -11924,35 +13266,33 @@ a.anchor-link {
 </div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#21462;&#24471;&#36039;&#26009;">&#21462;&#24471;&#36039;&#26009;<a class="anchor-link" href="#&#21462;&#24471;&#36039;&#26009;">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#31777;&#21934;&#12289;&#20316;&#28858;&#28204;&#35430;&#30446;&#30340;&#21363;&#21487;">&#31777;&#21934;&#12289;&#20316;&#28858;&#28204;&#35430;&#30446;&#30340;&#21363;&#21487;<a class="anchor-link" href="#&#31777;&#21934;&#12289;&#20316;&#28858;&#28204;&#35430;&#30446;&#30340;&#21363;&#21487;">&#182;</a></h2><p>Scikit-Learn Boston 房價資料集</p>
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_boston</span>
 
 <span class="n">boston</span> <span class="o">=</span> <span class="n">load_boston</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">boston</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">boston</span><span class="o">.</span><span class="n">DESCR</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">boston</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">boston</span><span class="o">.</span><span class="n">DESCR</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11962,24 +13302,22 @@ a.anchor-link {
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[&#39;CRIM&#39; &#39;ZN&#39; &#39;INDUS&#39; &#39;CHAS&#39; &#39;NOX&#39; &#39;RM&#39; &#39;AGE&#39; &#39;DIS&#39; &#39;RAD&#39; &#39;TAX&#39; &#39;PTRATIO&#39;
  &#39;B&#39; &#39;LSTAT&#39;]
-Boston House Prices dataset
-===========================
+.. _boston_dataset:
 
-Notes
-------
-Data Set Characteristics:  
+Boston house prices dataset
+---------------------------
+
+**Data Set Characteristics:**  
 
     :Number of Instances: 506 
 
-    :Number of Attributes: 13 numeric/categorical predictive
-    
-    :Median Value (attribute 14) is usually the target
+    :Number of Attributes: 13 numeric/categorical predictive. Median Value (attribute 14) is usually the target.
 
     :Attribute Information (in order):
         - CRIM     per capita crime rate by town
@@ -12002,7 +13340,7 @@ Data Set Characteristics:
     :Creator: Harrison, D. and Rubinfeld, D.L.
 
 This is a copy of UCI ML housing dataset.
-http://archive.ics.uci.edu/ml/datasets/Housing
+https://archive.ics.uci.edu/ml/machine-learning-databases/housing/
 
 
 This dataset was taken from the StatLib library which is maintained at Carnegie Mellon University.
@@ -12016,11 +13354,10 @@ pages 244-261 of the latter.
 The Boston house-price data has been used in many machine learning papers that address regression
 problems.   
      
-**References**
+.. topic:: References
 
    - Belsley, Kuh &amp; Welsch, &#39;Regression diagnostics: Identifying Influential Data and Sources of Collinearity&#39;, Wiley, 1980. 244-261.
    - Quinlan,R. (1993). Combining Instance-Based and Model-Based Learning. In Proceedings on the Tenth International Conference of Machine Learning, 236-243, University of Massachusetts, Amherst. Morgan Kaufmann.
-   - many more! (see http://archive.ics.uci.edu/ml/datasets/Housing)
 
 </pre>
 </div>
@@ -12035,13 +13372,13 @@ problems.
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">X_arr</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_arr</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">y_arr</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">target</span>
-<span class="k">print</span><span class="p">(</span><span class="n">X_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">y_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12051,7 +13388,7 @@ problems.
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -12064,17 +13401,22 @@ problems.
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">X_arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">y_arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_arr</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12084,12 +13426,14 @@ problems.
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>float64
-float64
+<pre>(354, 1)
+(152, 1)
+(354,)
+(152,)
 </pre>
 </div>
 </div>
@@ -12097,252 +13441,36 @@ float64
 </div>
 </div>
 
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24314;&#27083;-TensorFlow-&#35336;&#31639;&#22294;&#24418;">&#24314;&#27083; TensorFlow &#35336;&#31639;&#22294;&#24418;<a class="anchor-link" href="#&#24314;&#27083;-TensorFlow-&#35336;&#31639;&#22294;&#24418;">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Placeholders">Placeholders<a class="anchor-link" href="#Placeholders">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;placeholders&quot;</span><span class="p">):</span>
-  <span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">(</span><span class="mi">506</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-  <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">(</span><span class="mi">506</span><span class="p">,))</span>
-</pre></div>
-
+<h2 id="Benchmark">Benchmark<a class="anchor-link" href="#Benchmark">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20418;&#25976;">&#20418;&#25976;<a class="anchor-link" href="#&#20418;&#25976;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;weights&quot;</span><span class="p">):</span>
-  <span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
-  <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">((</span><span class="mi">1</span><span class="p">,)))</span>
-</pre></div>
-
+<h2 id="&#20197;-Scikit-Learn-&#30340;-LinearRegression-&#20316;&#23565;&#29031;">&#20197; Scikit-Learn &#30340; LinearRegression &#20316;&#23565;&#29031;<a class="anchor-link" href="#&#20197;-Scikit-Learn-&#30340;-LinearRegression-&#20316;&#23565;&#29031;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38928;&#28204;&#20540;">&#38928;&#28204;&#20540;<a class="anchor-link" href="#&#38928;&#28204;&#20540;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;prediction&quot;</span><span class="p">):</span>
-  <span class="n">y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Loss">Loss<a class="anchor-link" href="#Loss">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;loss&quot;</span><span class="p">):</span>
-  <span class="n">l</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Optimizer">Optimizer<a class="anchor-link" href="#Optimizer">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;optimizer&quot;</span><span class="p">):</span>
-  <span class="n">train_op</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">AdamOptimizer</span><span class="p">(</span><span class="o">.</span><span class="mo">001</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Summaries">Summaries<a class="anchor-link" href="#Summaries">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;summaries&quot;</span><span class="p">):</span>
-  <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="s2">&quot;loss&quot;</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
-  <span class="n">merged</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">merge_all</span><span class="p">()</span>
-
-<span class="n">train_writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s1">&#39;./graphs/linear-regression-train&#39;</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_default_graph</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#35347;&#32244;">&#35347;&#32244;<a class="anchor-link" href="#&#35347;&#32244;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">n_steps</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
-  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
-  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
-    <span class="n">feed_dict</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="n">X</span><span class="p">:</span> <span class="n">X_arr</span><span class="p">,</span>
-      <span class="n">y</span><span class="p">:</span> <span class="n">y_arr</span>
-    <span class="p">}</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">summary</span><span class="p">,</span> <span class="n">loss</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">train_op</span><span class="p">,</span> <span class="n">merged</span><span class="p">,</span> <span class="n">l</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="n">feed_dict</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;step </span><span class="si">%d</span><span class="s2">, loss: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">loss</span><span class="p">))</span>
-    <span class="n">train_writer</span><span class="o">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-  <span class="n">w_final</span><span class="p">,</span> <span class="n">b_final</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#22519;&#34892;&#30475;&#30475;">&#22519;&#34892;&#30475;&#30475;<a class="anchor-link" href="#&#22519;&#34892;&#30475;&#30475;">&#182;</a></h2>
-</div>
-</div>
-</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">mean_squared_error</span>
 
-<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;placeholders&quot;</span><span class="p">):</span>
-  <span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">(</span><span class="mi">506</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-  <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">(</span><span class="mi">506</span><span class="p">,))</span>
-<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;weights&quot;</span><span class="p">):</span>
-  <span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
-  <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">((</span><span class="mi">1</span><span class="p">,)))</span>
-<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;prediction&quot;</span><span class="p">):</span>
-  <span class="n">y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
-<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;loss&quot;</span><span class="p">):</span>
-  <span class="n">l</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;optimizer&quot;</span><span class="p">):</span>
-  <span class="n">train_op</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">AdamOptimizer</span><span class="p">(</span><span class="o">.</span><span class="mo">01</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;summaries&quot;</span><span class="p">):</span>
-  <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="s2">&quot;loss&quot;</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
-  <span class="n">merged</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">merge_all</span><span class="p">()</span>
-<span class="n">train_writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="s1">&#39;./graphs/linear-regression-train&#39;</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_default_graph</span><span class="p">())</span>
-<span class="n">n_steps</span> <span class="o">=</span> <span class="mi">8000</span>
-<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
-  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
-    <span class="n">feed_dict</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="n">X</span><span class="p">:</span> <span class="n">X_arr</span><span class="p">,</span>
-      <span class="n">y</span><span class="p">:</span> <span class="n">y_arr</span>
-    <span class="p">}</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">summary</span><span class="p">,</span> <span class="n">loss</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">train_op</span><span class="p">,</span> <span class="n">merged</span><span class="p">,</span> <span class="n">l</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="n">feed_dict</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-      <span class="k">print</span><span class="p">(</span><span class="s2">&quot;step </span><span class="si">%d</span><span class="s2">, loss: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">loss</span><span class="p">))</span>
-    <span class="n">train_writer</span><span class="o">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-  <span class="n">w_final</span><span class="p">,</span> <span class="n">b_final</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 </pre></div>
 
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>step 0, loss: 184922688.000000
-step 100, loss: 75612608.000000
-step 200, loss: 53861824.000000
-step 300, loss: 51198200.000000
-step 400, loss: 50001916.000000
-step 500, loss: 48757584.000000
-step 600, loss: 47448832.000000
-step 700, loss: 46100012.000000
-step 800, loss: 44731040.000000
-step 900, loss: 43358032.000000
-step 1000, loss: 41994396.000000
-step 1100, loss: 40650944.000000
-step 1200, loss: 39336544.000000
-step 1300, loss: 38058388.000000
-step 1400, loss: 36822196.000000
-step 1500, loss: 35632480.000000
-step 1600, loss: 34492744.000000
-step 1700, loss: 33405610.000000
-step 1800, loss: 32372882.000000
-step 1900, loss: 31395732.000000
-step 2000, loss: 30474774.000000
-step 2100, loss: 29610110.000000
-step 2200, loss: 28801444.000000
-step 2300, loss: 28048124.000000
-step 2400, loss: 27349092.000000
-step 2500, loss: 26703172.000000
-step 2600, loss: 26108832.000000
-step 2700, loss: 25564288.000000
-step 2800, loss: 25067712.000000
-step 2900, loss: 24617084.000000
-step 3000, loss: 24210138.000000
-step 3100, loss: 23844706.000000
-step 3200, loss: 23518374.000000
-step 3300, loss: 23228684.000000
-step 3400, loss: 22973210.000000
-step 3500, loss: 22749400.000000
-step 3600, loss: 22554774.000000
-step 3700, loss: 22386816.000000
-step 3800, loss: 22243098.000000
-step 3900, loss: 22121174.000000
-step 4000, loss: 22018700.000000
-step 4100, loss: 21933458.000000
-step 4200, loss: 21863304.000000
-step 4300, loss: 21806196.000000
-step 4400, loss: 21760272.000000
-step 4500, loss: 21723842.000000
-step 4600, loss: 21695324.000000
-step 4700, loss: 21673334.000000
-step 4800, loss: 21656632.000000
-step 4900, loss: 21644130.000000
-step 5000, loss: 21634966.000000
-step 5100, loss: 21628358.000000
-step 5200, loss: 21623696.000000
-step 5300, loss: 21620460.000000
-step 5400, loss: 21618260.000000
-step 5500, loss: 21616822.000000
-step 5600, loss: 21615880.000000
-step 5700, loss: 21615286.000000
-step 5800, loss: 21614908.000000
-step 5900, loss: 21614696.000000
-step 6000, loss: 21614574.000000
-step 6100, loss: 21614492.000000
-step 6200, loss: 21614448.000000
-step 6300, loss: 21614436.000000
-step 6400, loss: 21614400.000000
-step 6500, loss: 21614416.000000
-step 6600, loss: 21614434.000000
-step 6700, loss: 21614442.000000
-step 6800, loss: 21614424.000000
-step 6900, loss: 21614402.000000
-step 7000, loss: 21614388.000000
-step 7100, loss: 21614392.000000
-step 7200, loss: 21614400.000000
-step 7300, loss: 21614384.000000
-step 7400, loss: 21614384.000000
-step 7500, loss: 21614384.000000
-step 7600, loss: 21614384.000000
-step 7700, loss: 21614388.000000
-step 7800, loss: 21614390.000000
-step 7900, loss: 21614392.000000
-</pre>
-</div>
-</div>
-
+    </div>
 </div>
 </div>
 
@@ -12352,11 +13480,12 @@ step 7900, loss: 21614392.000000
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;係數：{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">w_final</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;截距項：{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b_final</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12366,12 +13495,13 @@ step 7900, loss: 21614392.000000
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>係數：[[6.624233e-06]]
-截距項：[22.532696]
+<pre>[-0.95406451]
+34.776016063907036
+38.68755662089717
 </pre>
 </div>
 </div>
@@ -12381,43 +13511,1107 @@ step 7900, loss: 21614392.000000
 
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="TensorBoard">TensorBoard<a class="anchor-link" href="#TensorBoard">&#182;</a></h2>
+<h2 id="Benchmark-&#23436;&#25972;&#31243;&#24335;&#30908;">Benchmark &#23436;&#25972;&#31243;&#24335;&#30908;<a class="anchor-link" href="#Benchmark-&#23436;&#25972;&#31243;&#24335;&#30908;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_boston</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">mean_squared_error</span>
+
+<span class="n">boston</span> <span class="o">=</span> <span class="n">load_boston</span><span class="p">()</span>
+<span class="n">X_arr</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">y_arr</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">target</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_arr</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24314;&#27083;-TensorFlow-&#35336;&#31639;&#22294;&#24418;">&#24314;&#27083; TensorFlow &#35336;&#31639;&#22294;&#24418;<a class="anchor-link" href="#&#24314;&#27083;-TensorFlow-&#35336;&#31639;&#22294;&#24418;">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Graph:-&#27794;&#26377;&#29992;-name-space">Graph: &#27794;&#26377;&#29992; name space<a class="anchor-link" href="#Graph:-&#27794;&#26377;&#29992;-name-space">&#182;</a></h2><p><img src="img/0403.png" alt=""></p>
+<h2 id="&#28310;&#20633;-Placeholders-&#20379;&#35347;&#32244;&#26178;&#36664;&#20837;-X_train&#12289;y_train">&#28310;&#20633; Placeholders &#20379;&#35347;&#32244;&#26178;&#36664;&#20837; X_train&#12289;y_train<a class="anchor-link" href="#&#28310;&#20633;-Placeholders-&#20379;&#35347;&#32244;&#26178;&#36664;&#20837;-X_train&#12289;y_train">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="n">X_train_shape</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">y_train_shape</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">X_train_shape</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">y_train_shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#28310;&#20633;&#35722;&#25976;&#20379;&#35347;&#32244;&#26178;&#23563;&#25214;&#26368;&#36969;&#20418;&#25976;&#65288;Weights&#65289;&#33287;&#27544;&#24046;&#38917;&#65288;Bias&#65289;">&#28310;&#20633;&#35722;&#25976;&#20379;&#35347;&#32244;&#26178;&#23563;&#25214;&#26368;&#36969;&#20418;&#25976;&#65288;Weights&#65289;&#33287;&#27544;&#24046;&#38917;&#65288;Bias&#65289;<a class="anchor-link" href="#&#28310;&#20633;&#35722;&#25976;&#20379;&#35347;&#32244;&#26178;&#23563;&#25214;&#26368;&#36969;&#20418;&#25976;&#65288;Weights&#65289;&#33287;&#27544;&#24046;&#38917;&#65288;Bias&#65289;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">W_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_train_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">b_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+<span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">W_shape</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">b_shape</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">W</span><span class="p">))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0.31668606]]
+[1.1543984]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#27298;&#26597;-X&#12289;W-&#33287;-b-&#30340;&#22806;&#35264;&#65292;&#23531;&#19979;-y_pred-&#30340;&#20844;&#24335;">&#27298;&#26597; X&#12289;W &#33287; b &#30340;&#22806;&#35264;&#65292;&#23531;&#19979; y_pred &#30340;&#20844;&#24335;<a class="anchor-link" href="#&#27298;&#26597;-X&#12289;W-&#33287;-b-&#30340;&#22806;&#35264;&#65292;&#23531;&#19979;-y_pred-&#30340;&#20844;&#24335;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(354, 1)
+(1, 1)
+(1,)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="(354,-1)-&#33287;-(1,)-&#21487;&#20197;&#30456;&#21152;&#36939;&#31639;&#21966;&#65311;">(354, 1) &#33287; (1,) &#21487;&#20197;&#30456;&#21152;&#36939;&#31639;&#21966;&#65311;<a class="anchor-link" href="#(354,-1)-&#33287;-(1,)-&#21487;&#20197;&#30456;&#21152;&#36939;&#31639;&#21966;&#65311;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">354</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="c1">#with tf.Session() as sess:</span>
+  <span class="c1">#print(sess.run(c))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#23531;&#19979;&#25104;&#26412;&#20989;&#25976;&#30340;&#20844;&#24335;">&#23531;&#19979;&#25104;&#26412;&#20989;&#25976;&#30340;&#20844;&#24335;<a class="anchor-link" href="#&#23531;&#19979;&#25104;&#26412;&#20989;&#25976;&#30340;&#20844;&#24335;">&#182;</a></h2><p><a href="https://scikit-learn.org/stable/modules/linear_model.html">https://scikit-learn.org/stable/modules/linear_model.html</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="tf.reduce_sum()-&#20570;&#20102;&#20160;&#40636;&#20107;&#65311;"><code>tf.reduce_sum()</code> &#20570;&#20102;&#20160;&#40636;&#20107;&#65311;<a class="anchor-link" href="#tf.reduce_sum()-&#20570;&#20102;&#20160;&#40636;&#20107;&#65311;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">354</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>354
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#23459;&#21578;-Optimizer-&#33287;&#23416;&#32722;&#36895;&#29575;">&#23459;&#21578; Optimizer &#33287;&#23416;&#32722;&#36895;&#29575;<a class="anchor-link" href="#&#23459;&#21578;-Optimizer-&#33287;&#23416;&#32722;&#36895;&#29575;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24314;&#27083;-TensorFlow-&#35336;&#31639;&#22294;&#24418;&#23436;&#25972;&#31243;&#24335;&#30908;">&#24314;&#27083; TensorFlow &#35336;&#31639;&#22294;&#24418;&#23436;&#25972;&#31243;&#24335;&#30908;<a class="anchor-link" href="#&#24314;&#27083;-TensorFlow-&#35336;&#31639;&#22294;&#24418;&#23436;&#25972;&#31243;&#24335;&#30908;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="n">X_train_shape</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">y_train_shape</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">W_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_train_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">b_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+
+<span class="c1"># placeholders</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">X_train_shape</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">y_train_shape</span><span class="p">)</span>
+<span class="c1"># variables</span>
+<span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">W_shape</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">b_shape</span><span class="p">))</span>
+<span class="c1"># prediction</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+<span class="c1"># loss</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># optimizer</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35347;&#32244;">&#35347;&#32244;<a class="anchor-link" href="#&#35347;&#32244;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_steps</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">train_writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="n">file_writer_path</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_default_graph</span><span class="p">())</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
+    <span class="n">feed_dict</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">X</span><span class="p">:</span> <span class="n">X_train</span><span class="p">,</span>
+      <span class="n">y</span><span class="p">:</span> <span class="n">y_train</span>
+    <span class="p">}</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">loss</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">loss</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="n">feed_dict</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step </span><span class="si">{}</span><span class="s2">, loss: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">loss</span><span class="p">))</span>
+  <span class="n">w_final</span><span class="p">,</span> <span class="n">b_final</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>step 0, loss: 151078112.0
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, fetches, contraction_fn)</span>
+<span class="ansi-green-intense-fg ansi-bold">    299</span>         self._unique_fetches.append(ops.get_default_graph().as_graph_element(
+<span class="ansi-green-fg">--&gt; 300</span><span class="ansi-red-fg">             fetch, allow_tensor=True, allow_operation=True))
+</span><span class="ansi-green-intense-fg ansi-bold">    301</span>       <span class="ansi-green-fg">except</span> TypeError <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/framework/ops.py</span> in <span class="ansi-cyan-fg">as_graph_element</span><span class="ansi-blue-fg">(self, obj, allow_tensor, allow_operation)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3489</span>     <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>_lock<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 3490</span><span class="ansi-red-fg">       </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_as_graph_element_locked<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> allow_tensor<span class="ansi-blue-fg">,</span> allow_operation<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3491</span> 
+
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/framework/ops.py</span> in <span class="ansi-cyan-fg">_as_graph_element_locked</span><span class="ansi-blue-fg">(self, obj, allow_tensor, allow_operation)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3578</span>       raise TypeError(&#34;Can not convert a %s into a %s.&#34; % (type(obj).__name__,
+<span class="ansi-green-fg">-&gt; 3579</span><span class="ansi-red-fg">                                                            types_str))
+</span><span class="ansi-green-intense-fg ansi-bold">   3580</span> 
+
+<span class="ansi-red-fg">TypeError</span>: Can not convert a float32 into a Tensor or Operation.
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-15-d806a2b66b6d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     11</span>       y<span class="ansi-blue-fg">:</span> y_train
+<span class="ansi-green-intense-fg ansi-bold">     12</span>     }
+<span class="ansi-green-fg">---&gt; 13</span><span class="ansi-red-fg">     </span>_<span class="ansi-blue-fg">,</span> loss <span class="ansi-blue-fg">=</span> sess<span class="ansi-blue-fg">.</span>run<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>optimizer<span class="ansi-blue-fg">,</span> loss<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> feed_dict<span class="ansi-blue-fg">=</span>feed_dict<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     14</span>     <span class="ansi-green-fg">if</span> i <span class="ansi-blue-fg">%</span> <span class="ansi-cyan-fg">100</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     15</span>       print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;step {}, loss: {}&#34;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">,</span> loss<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-fg">(self, fetches, feed_dict, options, run_metadata)</span>
+<span class="ansi-green-intense-fg ansi-bold">    927</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    928</span>       result = self._run(None, fetches, feed_dict, options_ptr,
+<span class="ansi-green-fg">--&gt; 929</span><span class="ansi-red-fg">                          run_metadata_ptr)
+</span><span class="ansi-green-intense-fg ansi-bold">    930</span>       <span class="ansi-green-fg">if</span> run_metadata<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    931</span>         proto_data <span class="ansi-blue-fg">=</span> tf_session<span class="ansi-blue-fg">.</span>TF_GetBuffer<span class="ansi-blue-fg">(</span>run_metadata_ptr<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">_run</span><span class="ansi-blue-fg">(self, handle, fetches, feed_dict, options, run_metadata)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1135</span>     <span class="ansi-red-fg"># Create a fetch handler to take care of the structure of fetches.</span>
+<span class="ansi-green-intense-fg ansi-bold">   1136</span>     fetch_handler = _FetchHandler(
+<span class="ansi-green-fg">-&gt; 1137</span><span class="ansi-red-fg">         self._graph, fetches, feed_dict_tensor, feed_handles=feed_handles)
+</span><span class="ansi-green-intense-fg ansi-bold">   1138</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1139</span>     <span class="ansi-red-fg"># Run request and get response.</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, graph, fetches, feeds, feed_handles)</span>
+<span class="ansi-green-intense-fg ansi-bold">    469</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    470</span>     <span class="ansi-green-fg">with</span> graph<span class="ansi-blue-fg">.</span>as_default<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 471</span><span class="ansi-red-fg">       </span>self<span class="ansi-blue-fg">.</span>_fetch_mapper <span class="ansi-blue-fg">=</span> _FetchMapper<span class="ansi-blue-fg">.</span>for_fetch<span class="ansi-blue-fg">(</span>fetches<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    472</span>     self<span class="ansi-blue-fg">.</span>_fetches <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    473</span>     self<span class="ansi-blue-fg">.</span>_targets <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">for_fetch</span><span class="ansi-blue-fg">(fetch)</span>
+<span class="ansi-green-intense-fg ansi-bold">    259</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>fetch<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">,</span> tuple<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    260</span>       <span class="ansi-red-fg"># NOTE(touts): This is also the code path for namedtuples.</span>
+<span class="ansi-green-fg">--&gt; 261</span><span class="ansi-red-fg">       </span><span class="ansi-green-fg">return</span> _ListFetchMapper<span class="ansi-blue-fg">(</span>fetch<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    262</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>fetch<span class="ansi-blue-fg">,</span> collections<span class="ansi-blue-fg">.</span>Mapping<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    263</span>       <span class="ansi-green-fg">return</span> _DictFetchMapper<span class="ansi-blue-fg">(</span>fetch<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, fetches)</span>
+<span class="ansi-green-intense-fg ansi-bold">    368</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    369</span>     self<span class="ansi-blue-fg">.</span>_fetch_type <span class="ansi-blue-fg">=</span> type<span class="ansi-blue-fg">(</span>fetches<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 370</span><span class="ansi-red-fg">     </span>self<span class="ansi-blue-fg">.</span>_mappers <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>_FetchMapper<span class="ansi-blue-fg">.</span>for_fetch<span class="ansi-blue-fg">(</span>fetch<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> fetch <span class="ansi-green-fg">in</span> fetches<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    371</span>     self<span class="ansi-blue-fg">.</span>_unique_fetches<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_value_indices <span class="ansi-blue-fg">=</span> _uniquify_fetches<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_mappers<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    372</span> 
+
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-intense-fg ansi-bold">    368</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    369</span>     self<span class="ansi-blue-fg">.</span>_fetch_type <span class="ansi-blue-fg">=</span> type<span class="ansi-blue-fg">(</span>fetches<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 370</span><span class="ansi-red-fg">     </span>self<span class="ansi-blue-fg">.</span>_mappers <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>_FetchMapper<span class="ansi-blue-fg">.</span>for_fetch<span class="ansi-blue-fg">(</span>fetch<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> fetch <span class="ansi-green-fg">in</span> fetches<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    371</span>     self<span class="ansi-blue-fg">.</span>_unique_fetches<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_value_indices <span class="ansi-blue-fg">=</span> _uniquify_fetches<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_mappers<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    372</span> 
+
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">for_fetch</span><span class="ansi-blue-fg">(fetch)</span>
+<span class="ansi-green-intense-fg ansi-bold">    269</span>         <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>fetch<span class="ansi-blue-fg">,</span> tensor_type<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    270</span>           fetches<span class="ansi-blue-fg">,</span> contraction_fn <span class="ansi-blue-fg">=</span> fetch_fn<span class="ansi-blue-fg">(</span>fetch<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 271</span><span class="ansi-red-fg">           </span><span class="ansi-green-fg">return</span> _ElementFetchMapper<span class="ansi-blue-fg">(</span>fetches<span class="ansi-blue-fg">,</span> contraction_fn<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    272</span>     <span class="ansi-red-fg"># Did not find anything.</span>
+<span class="ansi-green-intense-fg ansi-bold">    273</span>     raise TypeError(&#39;Fetch argument %r has invalid type %r&#39; % (fetch,
+
+<span class="ansi-green-fg">~/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, fetches, contraction_fn)</span>
+<span class="ansi-green-intense-fg ansi-bold">    302</span>         raise TypeError(&#39;Fetch argument %r has invalid type %r, &#39;
+<span class="ansi-green-intense-fg ansi-bold">    303</span>                         <span class="ansi-blue-fg">&#39;must be a string or Tensor. (%s)&#39;</span> <span class="ansi-blue-fg">%</span>
+<span class="ansi-green-fg">--&gt; 304</span><span class="ansi-red-fg">                         (fetch, type(fetch), str(e)))
+</span><span class="ansi-green-intense-fg ansi-bold">    305</span>       <span class="ansi-green-fg">except</span> ValueError <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    306</span>         raise ValueError(&#39;Fetch argument %r cannot be interpreted as a &#39;
+
+<span class="ansi-red-fg">TypeError</span>: Fetch argument 151078110.0 has invalid type &lt;class &#39;numpy.float32&#39;&gt;, must be a string or Tensor. (Can not convert a float32 into a Tensor or Operation.)</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#30332;&#29983;&#20102;&#20160;&#40636;&#20107;&#24773;&#65311;">&#30332;&#29983;&#20102;&#20160;&#40636;&#20107;&#24773;&#65311;<a class="anchor-link" href="#&#30332;&#29983;&#20102;&#20160;&#40636;&#20107;&#24773;&#65311;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
+  <span class="c1"># ...</span>
+  <span class="c1"># 這邊的物件命名同樣為 loss，但型別已經不同，feed_dict 是張量，但 fetch 是 ndarray</span>
+  <span class="n">_</span><span class="p">,</span> <span class="n">loss</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">loss</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="n">feed_dict</span><span class="p">)</span>
+  <span class="c1"># ...</span>
+</pre></div>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Graph:-&#26377;&#29992;-name-space">Graph: &#26377;&#29992; name space<a class="anchor-link" href="#Graph:-&#26377;&#29992;-name-space">&#182;</a></h2><p><img src="img/0404.png" alt=""></p>
+<h2 id="&#20462;&#25913;&#29289;&#20214;&#21629;&#21517;&#20043;&#24460;&#20877;&#20358;&#35430;&#19968;&#27425;">&#20462;&#25913;&#29289;&#20214;&#21629;&#21517;&#20043;&#24460;&#20877;&#20358;&#35430;&#19968;&#27425;<a class="anchor-link" href="#&#20462;&#25913;&#29289;&#20214;&#21629;&#21517;&#20043;&#24460;&#20877;&#20358;&#35430;&#19968;&#27425;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="n">X_train_shape</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">y_train_shape</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">W_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_train_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">b_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+
+<span class="c1"># placeholders</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">X_train_shape</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">y_train_shape</span><span class="p">)</span>
+<span class="c1"># variables</span>
+<span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">W_shape</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">b_shape</span><span class="p">))</span>
+<span class="c1"># prediction</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+<span class="c1"># loss</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># optimizer</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_steps</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">train_writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="n">file_writer_path</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_default_graph</span><span class="p">())</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
+    <span class="n">feed_dict</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">X</span><span class="p">:</span> <span class="n">X_train</span><span class="p">,</span>
+      <span class="n">y</span><span class="p">:</span> <span class="n">y_train</span>
+    <span class="p">}</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">loss_</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">loss</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="n">feed_dict</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step </span><span class="si">{}</span><span class="s2">, loss: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">loss_</span><span class="p">))</span>
+  <span class="n">w_final</span><span class="p">,</span> <span class="n">b_final</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>step 0, loss: 27671574.0
+step 100, loss: nan
+step 200, loss: nan
+step 300, loss: nan
+step 400, loss: nan
+step 500, loss: nan
+step 600, loss: nan
+step 700, loss: nan
+step 800, loss: nan
+step 900, loss: nan
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#28858;&#20160;&#40636;-loss-&#37117;&#26159;-nan&#65311;">&#28858;&#20160;&#40636; loss &#37117;&#26159; nan&#65311;<a class="anchor-link" href="#&#28858;&#20160;&#40636;-loss-&#37117;&#26159;-nan&#65311;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Learning-Rate-&#22826;&#22823;&#30340;&#32227;&#25925;">Learning Rate &#22826;&#22823;&#30340;&#32227;&#25925;<a class="anchor-link" href="#Learning-Rate-&#22826;&#22823;&#30340;&#32227;&#25925;">&#182;</a></h2><p><img src="img/0406.jpeg" alt=""></p>
+<p>Source: <a href="https://www.coursera.org/learn/machine-learning">Machine Learning | Coursera</a></p>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Scalar">Scalar<a class="anchor-link" href="#Scalar">&#182;</a></h2><p><img src="img/0405.png" alt=""></p>
+<h2 id="&#38477;&#20302;-Learning-Rate-&#20043;&#24460;&#20877;&#20358;&#35430;&#19968;&#27425;">&#38477;&#20302; Learning Rate &#20043;&#24460;&#20877;&#20358;&#35430;&#19968;&#27425;<a class="anchor-link" href="#&#38477;&#20302;-Learning-Rate-&#20043;&#24460;&#20877;&#20358;&#35430;&#19968;&#27425;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="n">X_train_shape</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">y_train_shape</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">W_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_train_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">b_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.00000001</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+
+<span class="c1"># placeholders</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">X_train_shape</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">y_train_shape</span><span class="p">)</span>
+<span class="c1"># variables</span>
+<span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">W_shape</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">b_shape</span><span class="p">))</span>
+<span class="c1"># prediction</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+<span class="c1"># loss</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># optimizer</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_steps</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">train_writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="n">file_writer_path</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_default_graph</span><span class="p">())</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
+    <span class="n">feed_dict</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">X</span><span class="p">:</span> <span class="n">X_train</span><span class="p">,</span>
+      <span class="n">y</span><span class="p">:</span> <span class="n">y_train</span>
+    <span class="p">}</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">loss_</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">loss</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="n">feed_dict</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step </span><span class="si">{}</span><span class="s2">, loss: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">loss_</span><span class="p">))</span>
+  <span class="n">w_final</span><span class="p">,</span> <span class="n">b_final</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>step 0, loss: 100967088.0
+step 100, loss: 24387494.0
+step 200, loss: 22804240.0
+step 300, loss: 21404774.0
+step 400, loss: 20167788.0
+step 500, loss: 19074424.0
+step 600, loss: 18108020.0
+step 700, loss: 17253796.0
+step 800, loss: 16498739.0
+step 900, loss: 15831363.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#27298;&#35222;-TensorBoard">&#27298;&#35222; TensorBoard<a class="anchor-link" href="#&#27298;&#35222;-TensorBoard">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22238;&#21040;-Terminal-&#21855;&#21205;-TensorBoard">&#22238;&#21040; Terminal &#21855;&#21205; TensorBoard<a class="anchor-link" href="#&#22238;&#21040;-Terminal-&#21855;&#21205;-TensorBoard">&#182;</a></h2><div class="highlight"><pre><span></span>tensorboard --logdir<span class="o">=</span>path/to/log-directory
+</pre></div>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/0407.png" alt=""></p>
+
 </div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21152;&#20837;-Name-Scopes">&#21152;&#20837; Name Scopes<a class="anchor-link" href="#&#21152;&#20837;-Name-Scopes">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="TensorFlow-&#19981;&#30693;&#36947;&#21738;&#20123;&#31680;&#40670;&#25033;&#35442;&#27512;&#39006;&#22312;&#19968;&#36215;">TensorFlow &#19981;&#30693;&#36947;&#21738;&#20123;&#31680;&#40670;&#25033;&#35442;&#27512;&#39006;&#22312;&#19968;&#36215;<a class="anchor-link" href="#TensorFlow-&#19981;&#30693;&#36947;&#21738;&#20123;&#31680;&#40670;&#25033;&#35442;&#27512;&#39006;&#22312;&#19968;&#36215;">&#182;</a></h2><p>利用 <code>with tf.name_scope(name_of_that_scope)</code> 將節點歸類起來，讓 Graph 更簡潔</p>
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="n">name_of_that_scope</span><span class="p">):</span>
+  <span class="c1"># declare op_1</span>
+  <span class="c1"># declare op_2</span>
+  <span class="c1"># ...</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="n">X_train_shape</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">y_train_shape</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">W_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_train_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">b_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.00000001</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+
+<span class="c1"># placeholders</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;placeholders&quot;</span><span class="p">):</span>
+  <span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">X_train_shape</span><span class="p">)</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">y_train_shape</span><span class="p">)</span>
+<span class="c1"># variables</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;variables&quot;</span><span class="p">):</span>
+  <span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">W_shape</span><span class="p">))</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">b_shape</span><span class="p">))</span>
+<span class="c1"># prediction</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;prediction&quot;</span><span class="p">):</span>
+  <span class="n">y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+<span class="c1"># loss</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;loss&quot;</span><span class="p">):</span>
+  <span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># optimizer</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;optimizer&quot;</span><span class="p">):</span>
+  <span class="n">opt</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">)</span>
+  <span class="n">optimizer</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_steps</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">train_writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="n">file_writer_path</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_default_graph</span><span class="p">())</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
+    <span class="n">feed_dict</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">X</span><span class="p">:</span> <span class="n">X_train</span><span class="p">,</span>
+      <span class="n">y</span><span class="p">:</span> <span class="n">y_train</span>
+    <span class="p">}</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">loss_</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">loss</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="n">feed_dict</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step </span><span class="si">{}</span><span class="s2">, loss: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">loss_</span><span class="p">))</span>
+  <span class="n">w_final</span><span class="p">,</span> <span class="n">b_final</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>step 0, loss: 137779584.0
+step 100, loss: 27330614.0
+step 200, loss: 25405652.0
+step 300, loss: 23704144.0
+step 400, loss: 22200216.0
+step 500, loss: 20870870.0
+step 600, loss: 19695880.0
+step 700, loss: 18657296.0
+step 800, loss: 17739318.0
+step 900, loss: 16927904.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Graph-with-name-scopes">Graph with name scopes<a class="anchor-link" href="#Graph-with-name-scopes">&#182;</a></h2><p><img src="img/0408.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35519;&#25972;&#35347;&#32244;&#30340;&#27425;&#25976;&#33287;&#35264;&#23519;-loss-&#26159;&#21542;&#28472;&#36264;&#25910;&#25986;">&#35519;&#25972;&#35347;&#32244;&#30340;&#27425;&#25976;&#33287;&#35264;&#23519; loss &#26159;&#21542;&#28472;&#36264;&#25910;&#25986;<a class="anchor-link" href="#&#35519;&#25972;&#35347;&#32244;&#30340;&#27425;&#25976;&#33287;&#35264;&#23519;-loss-&#26159;&#21542;&#28472;&#36264;&#25910;&#25986;">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_steps</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+<span class="n">loss_history</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">train_writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="n">file_writer_path</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_default_graph</span><span class="p">())</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
+    <span class="n">feed_dict</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">X</span><span class="p">:</span> <span class="n">X_train</span><span class="p">,</span>
+      <span class="n">y</span><span class="p">:</span> <span class="n">y_train</span>
+    <span class="p">}</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">loss_</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">loss</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="n">feed_dict</span><span class="p">)</span>
+    <span class="n">loss_history</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">loss_</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">500</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step </span><span class="si">{}</span><span class="s2">, loss: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">loss_</span><span class="p">))</span>
+  <span class="n">w_final</span><span class="p">,</span> <span class="n">b_final</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>step 0, loss: 31126028.0
+step 500, loss: 18622052.0
+step 1000, loss: 14997395.0
+step 1500, loss: 13041798.0
+step 2000, loss: 11986688.0
+step 2500, loss: 11417450.0
+step 3000, loss: 11110320.0
+step 3500, loss: 10944623.0
+step 4000, loss: 10855230.0
+step 4500, loss: 10806993.0
+step 5000, loss: 10780968.0
+step 5500, loss: 10766922.0
+step 6000, loss: 10759348.0
+step 6500, loss: 10755261.0
+step 7000, loss: 10753067.0
+step 7500, loss: 10751872.0
+step 8000, loss: 10751224.0
+step 8500, loss: 10750878.0
+step 9000, loss: 10750695.0
+step 9500, loss: 10750594.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">),</span> <span class="n">loss_history</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Loss Summary&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Epochs&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Loss&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>&lt;Figure size 640x480 with 1 Axes&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">w_final</span><span class="p">)</span> <span class="o">+</span> <span class="n">b_final</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">w_final</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_final</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0.00271693]]
+[22.716482]
+81.63979943647136
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#23559;-Loss-&#21152;&#20837;-TensorBoard-&#20013;&#30340;-Scalar-&#38913;&#31844;">&#23559; Loss &#21152;&#20837; TensorBoard &#20013;&#30340; Scalar &#38913;&#31844;<a class="anchor-link" href="#&#23559;-Loss-&#21152;&#20837;-TensorBoard-&#20013;&#30340;-Scalar-&#38913;&#31844;">&#182;</a></h2><ul>
+<li>增加一個 summaries 的 name scope</li>
+<li>每一次的 step（epoch）都要將 loss 記錄起來</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="n">X_train_shape</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">y_train_shape</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">W_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_train_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">b_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.00000001</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+
+<span class="c1"># placeholders</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;placeholders&quot;</span><span class="p">):</span>
+  <span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">X_train_shape</span><span class="p">)</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">y_train_shape</span><span class="p">)</span>
+<span class="c1"># variables</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;variables&quot;</span><span class="p">):</span>
+  <span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">W_shape</span><span class="p">))</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">b_shape</span><span class="p">))</span>
+<span class="c1"># prediction</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;prediction&quot;</span><span class="p">):</span>
+  <span class="n">y_pred</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+<span class="c1"># loss</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;loss&quot;</span><span class="p">):</span>
+  <span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># optimizer</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;optimizer&quot;</span><span class="p">):</span>
+  <span class="n">opt</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">)</span>
+  <span class="n">optimizer</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+<span class="c1"># summaries</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">&quot;summary&quot;</span><span class="p">):</span>
+  <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="s2">&quot;loss&quot;</span><span class="p">,</span> <span class="n">loss</span><span class="p">)</span>
+  <span class="n">merged</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">merge_all</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_steps</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">file_writer_path</span> <span class="o">=</span> <span class="s2">&quot;./graphs/linear-regression&quot;</span>
+<span class="n">loss_history</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">train_writer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">FileWriter</span><span class="p">(</span><span class="n">file_writer_path</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_default_graph</span><span class="p">())</span>
+
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>
+  <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">initializer</span><span class="p">)</span>  
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
+    <span class="n">feed_dict</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">X</span><span class="p">:</span> <span class="n">X_train</span><span class="p">,</span>
+      <span class="n">y</span><span class="p">:</span> <span class="n">y_train</span>
+    <span class="p">}</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">loss_</span><span class="p">,</span> <span class="n">summary</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">loss</span><span class="p">,</span> <span class="n">merged</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="n">feed_dict</span><span class="p">)</span>
+    <span class="n">train_writer</span><span class="o">.</span><span class="n">add_summary</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">500</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step </span><span class="si">{}</span><span class="s2">, loss: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">loss_</span><span class="p">))</span>
+  <span class="n">w_final</span><span class="p">,</span> <span class="n">b_final</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>step 0, loss: 36126400.0
+step 500, loss: 19822056.0
+step 1000, loss: 15644816.0
+step 1500, loss: 13391102.0
+step 2000, loss: 12175168.0
+step 2500, loss: 11519122.0
+step 3000, loss: 11165176.0
+step 3500, loss: 10974224.0
+step 4000, loss: 10871188.0
+step 4500, loss: 10815600.0
+step 5000, loss: 10785622.0
+step 5500, loss: 10769430.0
+step 6000, loss: 10760709.0
+step 6500, loss: 10755999.0
+step 7000, loss: 10753460.0
+step 7500, loss: 10752086.0
+step 8000, loss: 10751330.0
+step 8500, loss: 10750944.0
+step 9000, loss: 10750728.0
+step 9500, loss: 10750614.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/0409.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#22914;&#26524;-Loss-Function-&#27794;&#26377;&#25910;&#25986;&#24590;&#40636;&#36774;&#65311;">&#22914;&#26524; Loss Function &#27794;&#26377;&#25910;&#25986;&#24590;&#40636;&#36774;&#65311;<a class="anchor-link" href="#&#22914;&#26524;-Loss-Function-&#27794;&#26377;&#25910;&#25986;&#24590;&#40636;&#36774;&#65311;">&#182;</a></h2><ul>
 <li>增加 Steps</li>
@@ -12427,27 +14621,186 @@ step 7900, loss: 21614392.000000
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22914;&#26524;&#37325;&#26032;&#35347;&#32244;&#30340;&#26178;&#20505;&#29986;&#29983;&#20102;&#37679;&#35492;&#21602;&#65311;">&#22914;&#26524;&#37325;&#26032;&#35347;&#32244;&#30340;&#26178;&#20505;&#29986;&#29983;&#20102;&#37679;&#35492;&#21602;&#65311;<a class="anchor-link" href="#&#22914;&#26524;&#37325;&#26032;&#35347;&#32244;&#30340;&#26178;&#20505;&#29986;&#29983;&#20102;&#37679;&#35492;&#21602;&#65311;">&#182;</a></h2><ul>
+<li>Restart Kernel 清空 Graph</li>
+<li>或者在訓練之前執行：</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">get_default_graph</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="House-Prices:-Advanced-Regression-Techniques">House Prices: Advanced Regression Techniques<a class="anchor-link" href="#House-Prices:-Advanced-Regression-Techniques">&#182;</a></h2><ul>
-<li>使用 <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques">https://www.kaggle.com/c/house-prices-advanced-regression-techniques</a> 資料</li>
-<li>嘗試使用 TensorFlow 建立一個單變數迴歸模型</li>
-<li>嘗試使用 TensorFlow 建立一個複迴歸模型</li>
-</ul>
+<h2 id="&#20197;-Boston-&#24314;&#31435;&#19968;&#20491;&#38617;&#35722;&#25976;&#22238;&#27512;&#27169;&#22411;&#65306;MEDV-~-RM-+-AGE-+-LSTAT">&#20197; Boston &#24314;&#31435;&#19968;&#20491;&#38617;&#35722;&#25976;&#22238;&#27512;&#27169;&#22411;&#65306;MEDV ~ RM + AGE + LSTAT<a class="anchor-link" href="#&#20197;-Boston-&#24314;&#31435;&#19968;&#20491;&#38617;&#35722;&#25976;&#22238;&#27512;&#27169;&#22411;&#65306;MEDV-~-RM-+-AGE-+-LSTAT">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_arr</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">y_arr</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">target</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(506, 3)
+(506,)
+</pre>
+</div>
+</div>
 
 </div>
 </div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_arr</span><span class="p">,</span> <span class="n">y_arr</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(354, 3)
+(152, 3)
+(354,)
+(152,)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">),</span> <span class="n">loss_history</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Loss Summary&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Epochs&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Loss&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">w_final</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_final</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0.7626304 ]
+ [2.8682997 ]
+ [0.19584617]]
+[1.6414901]
+81.69029280915167
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>
