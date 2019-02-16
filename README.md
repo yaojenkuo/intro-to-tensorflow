@@ -32,11 +32,13 @@
 - [Constants, Variables, and Placeholders](constants-variables-and-placeholders.slides.html)
 - [Prerequisites for Building Models with TensorFlow](prerequisites-for-building-models-with-tf.slides.html)
 - [Linear Regression with TensorFlow](linear-regression-with-tf.slides.html)
-- [Logistic Regression with TensorFlow]()
+- [Logistic Regression with TensorFlow](logistic-regression-with-tf.slides.html)
 
 ## 延伸閱讀
 
+- [Hands-On Machine Learning with Scikit-Learn and TensorFlow](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1491962291)
 - [TensorFlow for Deep Learning](https://www.amazon.com/TensorFlow-Deep-Learning-Regression-Reinforcement/dp/1491980451)
+- [Deep Learning(Adaptive Computation and Machine Learning series)](https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618/ref=sr_1_1?ie=UTF8&qid=1472485235&sr=8-1&keywords=deep+learning+book)
 
 ## 課程錄影清單
 
