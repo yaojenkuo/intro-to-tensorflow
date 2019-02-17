@@ -33,9 +33,13 @@
 - [Prerequisites for Building Models with TensorFlow](prerequisites-for-building-models-with-tf.slides.html)
 - [Linear Regression with TensorFlow](linear-regression-with-tf.slides.html)
 - [Logistic Regression with TensorFlow](logistic-regression-with-tf.slides.html)
+- [Fully Connected Deep Networks with TensorFlow](fully-connected-deep-networks-with-tf.slides.html)
+- [Convolutional Neural Networks with TensorFlow](convolutional-neural-networks-with-tf.slides.html)
 
 ## 延伸閱讀
 
+- [[第 29 天] 深度學習（3）MNIST 手寫數字辨識](https://ithelp.ithome.com.tw/articles/10187912)
+- [[第 30 天] 深度學習（4）卷積神經網絡與鐵人賽總結](https://ithelp.ithome.com.tw/articles/10188044)
 - [Hands-On Machine Learning with Scikit-Learn and TensorFlow](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1491962291)
 - [TensorFlow for Deep Learning](https://www.amazon.com/TensorFlow-Deep-Learning-Regression-Reinforcement/dp/1491980451)
 - [Deep Learning(Adaptive Computation and Machine Learning series)](https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618/ref=sr_1_1?ie=UTF8&qid=1472485235&sr=8-1&keywords=deep+learning+book)
