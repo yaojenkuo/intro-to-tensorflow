@@ -36,6 +36,17 @@
 - [Fully Connected Deep Networks with TensorFlow](fully-connected-deep-networks-with-tf.slides.html)
 - [Convolutional Neural Networks with TensorFlow](convolutional-neural-networks-with-tf.slides.html)
 
+## 課程投影片（PDF 格式）
+
+- [Setup](PDFs/00-setup-slides.pdf)
+- [Getting Started](PDFs/01-getting-started-slides.pdf)
+- [Constants, Variables, and Placeholders](PDFs/02-constants-variables-and-placeholders-slides.pdf)
+- [Prerequisites for Building Models with TensorFlow](PDFs/03-prerequisites-for-building-models-with-tf-slides.pdf)
+- [Linear Regression with TensorFlow](PDFs/04-linear-regression-with-tf-slides.pdf)
+- [Logistic Regression with TensorFlow](PDFs/05-logistic-regression-with-tf-slides.pdf)
+- [Fully Connected Deep Networks with TensorFlow](PDFs/06-fully-connected-deep-networks-with-tf-slides.pdf)
+- [Convolutional Neural Networks with TensorFlow](PDFs/07-convolutional-neural-networks-with-tf-slides.pdf)
+
 ## 延伸閱讀
 
 - [[第 29 天] 深度學習（3）MNIST 手寫數字辨識](https://ithelp.ithome.com.tw/articles/10187912)
