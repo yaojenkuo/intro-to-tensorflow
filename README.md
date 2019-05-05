@@ -12,12 +12,12 @@ This is a brief introduction to TensorFlow, you will receive a certificate if at
 
 ## 課程共筆
 
-- [311 期假日專題班]()
+- [311 期假日專題班](https://colab.research.google.com/drive/12Nm7tBzIPltRYKDNevtcYnveuO9q0aSE)
 - [307 期假日專題班](https://colab.research.google.com/drive/1ruwJVWlW71FcJHWaS1nKED5o6HT8k1Ep)
 
 ## 課程投影片
 
-- [Setup](setup.slides.html)
+- [Setup](00-setup.slides.html)
 - [Getting Started](getting-started.slides.html)
 - [Constants, Variables, and Placeholders](constants-variables-and-placeholders.slides.html)
 - [Prerequisites for Building Models with TensorFlow](prerequisites-for-building-models-with-tf.slides.html)
@@ -47,4 +47,5 @@ This is a brief introduction to TensorFlow, you will receive a certificate if at
 
 ## 課程錄影清單
 
+- [311 期假日專題班]()
 - [307 期假日專題班](https://www.youtube.com/playlist?list=PLEq7iw5uOtuWJ5Tea-GeqhH6XF9zhLi2W)
