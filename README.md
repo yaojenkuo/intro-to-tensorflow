@@ -20,7 +20,7 @@ This is a brief introduction to TensorFlow, you will receive a certificate if at
 - [Setup](00-setup.slides.html)
 - [Getting Started](01-getting-started.slides.html)
 - [Constants, Variables, and Placeholders](02-constants-variables-and-placeholders.slides.html)
-- [Prerequisites for Building Models with TensorFlow](02-prerequisites-for-building-models-with-tf.slides.html)
+- [Prerequisites for Building Models with TensorFlow](03-prerequisites-for-building-models-with-tf.slides.html)
 - [Linear Regression with TensorFlow](linear-regression-with-tf.slides.html)
 - [Logistic Regression with TensorFlow](logistic-regression-with-tf.slides.html)
 - [Fully Connected Deep Networks with TensorFlow](fully-connected-deep-networks-with-tf.slides.html)
