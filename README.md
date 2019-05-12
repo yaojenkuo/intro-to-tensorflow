@@ -47,5 +47,5 @@ This is a brief introduction to TensorFlow, you will receive a certificate if at
 
 ## 課程錄影清單
 
-- [311 期假日專題班]()
+- [311 期假日專題班](https://www.youtube.com/playlist?list=PLEq7iw5uOtuVmtuT1EPkdqWGIqESKiFGq)
 - [307 期假日專題班](https://www.youtube.com/playlist?list=PLEq7iw5uOtuWJ5Tea-GeqhH6XF9zhLi2W)
