@@ -24,7 +24,7 @@ This is a brief introduction to TensorFlow, you will receive a certificate if at
 - [Linear Regression with TensorFlow](04-linear-regression-with-tf.slides.html)
 - [Logistic Regression with TensorFlow](05-logistic-regression-with-tf.slides.html)
 - [Fully Connected Deep Networks with TensorFlow](06-fully-connected-deep-networks-with-tf.slides.html)
-- [Convolutional Neural Networks with TensorFlow](07-convolutional-neural-networks-with-tf.slides.html)
+- [Convolutional Neural Networks with TensorFlow Keras](07-convolutional-neural-networks-with-tf-keras.slides.html)
 
 ## 課程投影片（PDF 格式）
 
@@ -35,7 +35,7 @@ This is a brief introduction to TensorFlow, you will receive a certificate if at
 - [Linear Regression with TensorFlow](PDFs/04-linear-regression-with-tf-slides.pdf)
 - [Logistic Regression with TensorFlow](PDFs/05-logistic-regression-with-tf-slides.pdf)
 - [Fully Connected Deep Networks with TensorFlow](PDFs/06-fully-connected-deep-networks-with-tf-slides.pdf)
-- [Convolutional Neural Networks with TensorFlow](PDFs/07-convolutional-neural-networks-with-tf-slides.pdf)
+- [Convolutional Neural Networks with TensorFlow Keras](PDFs/07-convolutional-neural-networks-with-tf-keras-slides.pdf)
 
 ## 延伸閱讀
 
